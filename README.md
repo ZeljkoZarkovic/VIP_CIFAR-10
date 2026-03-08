@@ -25,7 +25,7 @@ Instalacija zavisnosti: <b>pip install -r requirements.txt</b>
 
 ### <b>01_data_analysis.ipynb</b>  
 Ovaj notebook služi za kompletnu eksploratornu analizu podataka (EDA) CIFAR-10 skupa podataka.  
-Koristi se zajedno sa data_pipeline.py i čuva sve rezultate (grafike i CSV fajlove) u folderu analysis_result.
+Koristi se zajedno sa data_pipeline.py(reproducibilni koraci za ucitavanje, ciscenje, validaciju i transformaciju podataka) i čuva sve rezultate (grafike i CSV fajlove) u folderu analysis_result.
 
 Sekcije:
 - Import biblioteka
