@@ -4,7 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from tensorflow import keras
+import keras
 from sklearn.model_selection import KFold
 from PIL import Image
 from pathlib import Path
@@ -90,7 +90,8 @@ class CIFAR10Trainer:
                 X.append(img_array)
                 y.append(label_to_idx[row['label']])
 
-        X = np.array(X, dtype=np.float32) 
+        X = np.array(X, dtype=np.float32) / 255.0
+        y = np.array(y, dtype=np.int32)
 
         print(f"  Učitano {len(X)} slika")
         print(f"  Shape: {X.shape}")
