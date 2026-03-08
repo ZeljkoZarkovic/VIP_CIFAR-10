@@ -10,9 +10,9 @@ warnings.filterwarnings('ignore')
 class CIFAR10DataPipeline:
     def __init__(self, data_dir: str = 'data/cifar-10'):
         self.data_dir = Path(data_dir)
-        self.train_dir = self.data_dir 
-        self.test_dir = self.data_dir
-        self.labels_file = self.data_dir
+        self.train_dir = self.data_dir / 'train'
+        self.test_dir = self.data_dir / 'test'
+        self.labels_file = self.data_dir / 'trainLabels.csv'
 
         #CIFAR-10 klase
         self.classes = ['airplane', 'automobile', 'bird', 'cat', 'deer',
