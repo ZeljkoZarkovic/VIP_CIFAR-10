@@ -1,4 +1,4 @@
-#train_model.py - Treniranje modela sa cross-validacijom, optimiyacijom hiperparametara i logovanjem
+#train_model.py - Treniranje modela sa cross-validacijom, optimizacijom hiperparametara i logovanjem
 
 import os
 import numpy as np

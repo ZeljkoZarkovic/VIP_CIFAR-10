@@ -21,11 +21,14 @@ Instalacija zavisnosti: <b>pip install -r requirements.txt</b>
 ### Analiza podataka - 01_data_analysis.ipynb  
 <b>jupyter notebook 01_data_analysis.ipynb</b>
 
+### Model Training - 02_model_training.ipynb
+<b>jupyter notebook 02_model_training.ipynb</b>
+
 ## <b>Notebook-ovi</b>
 
 ### <b>01_data_analysis.ipynb</b>  
 Ovaj notebook služi za kompletnu eksploratornu analizu podataka (EDA) CIFAR-10 skupa podataka.  
-Koristi se zajedno sa data_pipeline.py(reproducibilni koraci za ucitavanje, ciscenje, validaciju i transformaciju podataka) i čuva sve rezultate (grafike i CSV fajlove) u folderu analysis_result.
+Koristi se zajedno sa <b>data_pipeline.py</b> (reproducibilni koraci za ucitavanje, ciscenje, validaciju i transformaciju podataka) i čuva sve rezultate (grafike i CSV fajlove) u folderu analysis_result.
 
 Sekcije:
 - Import biblioteka
@@ -43,3 +46,19 @@ Sekcije:
 - Čuvanje obrađenih podataka
 
 Vreme izvrsavanja: ~2–3 minuta
+
+### <b>02_model_training.ipynb</b>
+Ovaj notebook sluzi za definisanje arhitekture i treniranje modela.  
+Koristi se zajedno sa <b>model_arhitecture.py</b> (Definicija arhitekture neuronske mreze u klasfikaciji CIFAR-10 slika) i sa <b>train_model.py</b>  
+(treniranje modela sa cross-validacijom, optimizacijom hiperparametara i logovanjem). Rezultati se cuvaju u folderu training_result, logs, mlruns, models.
+
+Sekcije:
+- Import biblioteka
+- Pregled arhitekture
+- Učitavanje podataka
+- Vizualizacija uzoraka
+- Definisanje hiperparametara
+- Treniranje sa cross-validacijom
+- Analiza rezultata
+
+Vreme izvrsavanja: ~10-20 minuta (za 5,000 uzoraka)
