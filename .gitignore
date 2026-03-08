@@ -30,8 +30,6 @@ models/*.h5
 *.ipynb_checkpoints/
 
 #Data files
-processed_train_labels.csv
-*.csv
 !trainLabels.csv
 !sampleSubmission.csv
 
