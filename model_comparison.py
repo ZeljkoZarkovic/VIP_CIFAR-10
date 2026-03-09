@@ -1,4 +1,4 @@
-#Model za treniranje i poredjenje razlicitih modela.
+#Modul za treniranje i poredjenje razlicitih modela.
 
 import numpy as np
 import pandas as pd
