@@ -10,7 +10,7 @@ Projekat implementira kompletan pipeline za:
 
 ### Dataset: CIFAR-10  
 - 50.000 slika za trening (32x32 RGB)
-- 300.000 slika za testiranje  
+- 10.000 slika za testiranje  
 - 10 klasa: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
 
 ## <b>Instalacija</b>
