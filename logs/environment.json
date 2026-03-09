@@ -1,8 +1,8 @@
 {
-  "tensorflow_version": "2.20.0",
-  "keras_version": "3.11.3",
-  "numpy_version": "2.2.6",
-  "pandas_version": "2.3.2",
-  "python_version": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "tensorflow_version": "2.10.0",
+  "keras_version": "2.10.0",
+  "numpy_version": "1.23.5",
+  "pandas_version": "2.3.3",
+  "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
   "random_seed": 42
 }

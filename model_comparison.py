@@ -21,7 +21,7 @@ RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 tf.random.set_seed(RANDOM_SEED)
 
-class ModelComparation:
+class ModelComparator:
     #Klasa za poredjenje razlicitih modela
 
     def __init__(self, classes: List[str]):
@@ -108,9 +108,13 @@ class ModelComparation:
             fold_results.append(fold_result)
             fold_histories.append(history.history)
             
-            print(f"  ✓ Val Acc: {val_acc:.4f}, Train Time: {train_time:.2f}s")
+            print(f"Val Acc: {val_acc:.4f}, Train Time: {train_time:.2f}s")
 
         total_time = time.time() - start_time_total
+
+        # Model info
+        model_size = sum([np.prod(w.shape) for w in model.get_weights()])
+        model_memory = model_size * 4 / (1024**2)  # MB (float32)
 
         #Agregacija rezultata
         result = {
@@ -132,7 +136,7 @@ class ModelComparation:
         
         self.results.append(result)
         
-        print(f"\n✅ {model_name} završen!")
+        print(f"\n{model_name} završen!")
         print(f"  Avg Val Acc: {result['avg_val_accuracy']:.4f} ± {result['std_val_accuracy']:.4f}")
         print(f"  Avg Train Time: {result['avg_train_time']:.2f}s")
         print(f"  Model Size: {result['model_size_params']:,} params ({result['model_memory_mb']:.2f} MB)")
