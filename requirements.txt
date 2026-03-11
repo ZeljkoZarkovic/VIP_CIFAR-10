@@ -6,6 +6,7 @@ pillow>=10.3
 scikit-learn>=1.5
 jupyter>=1.1
 ipykernel>=6.29
+openpyxl>=3.1
 
 # Deep Learning
 tensorflow==2.10.0
