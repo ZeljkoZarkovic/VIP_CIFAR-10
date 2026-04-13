@@ -81,3 +81,52 @@ Sekcije:
 - Cuvanje rezultata
 
 Vreme izvrsavanja: ~30-60 minuta (za 10,000 uzoraka) koriscenjem GPU-a, u mom slucaju 5h koriscenjem CPU-a :(
+
+## <b>Aplikacija - Pokretanje</b>
+
+### <b>Pokretanje aplikacije</b>
+Za pokretanje aplikacije potrebno je pokrenuti backend i frontend deo.
+
+### <b>Pokretanje backend-a</b>
+U terminalu je potrebno pozicionirati se u root direktorijum projekta i pokrenuti: <b>python backend.py</b>
+Ovim se pokreće Flask API za CIFAR-10 klasifikaciju. Nakon pokretanja, server će biti dostupan na: http://localhost:5000
+
+### <b>Pokretanje frontend-a</b>
+Nakon što je backend pokrenut, potrebno je otvoriti frontend:
+- potrebno je pronaći <b>index.html</b> u <b>frontend</b> folderu
+- pokrenuti ga dvoklikom ili otvoriti u browseru.
+
+Backend mora biti pokrenut pre otvaranja frontend-a, jer aplikacija šalje zahteve ka serveru za klasifikaciju slika.
+
+## <b>Aplikacija - Uputstvo za korišćenje</b>
+Ova aplikacija služi za klasifikaciju slika pomoću CIFAR-10 modela.
+
+### <b>Dodavanje slike</b>
+Slika se može dodati na dva načina:
+- klikom na polje za upload i odabirom slike sa računara
+- prevlačenjem slike (drag & drop) u predviđeno polje
+
+### <b>Odabir modela</b>
+Iz padajućeg menija potrebno je izabrati model koji korisnik želi da koristi za klasifikaciju. 
+Dostupno je više modela, a svaki može dati različite rezultate.
+
+### <b>Pokretanje klasifikacije</b>
+Klikom na dugme <b>"Klasifikuj"</b> model obrađuje sliku.
+
+![Pokretanje klasifikacije](instruction_image/1.png)
+
+---
+
+### <b>Prikaz rezultata</b>
+Nakon klasifikacije:
+- na desnoj strani se prikazuje predikovana klasa (npr. Automobile)
+- prikazuje se i procenat pouzdanosti
+- ispod se nalazi lista svih klasa kao i klasa kojoj slika pripada
+
+![Rezultati klasifikacije](instruction_image/2.png)
+
+---
+
+### <b>Poređenje modela</b>
+Moguće je promeniti model i ponovo pokrenuti klasifikaciju kako bi korisnik uporedio rezultate
+između različitih modela.
