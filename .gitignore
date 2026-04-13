@@ -24,6 +24,7 @@ wheels/
 *.egg
 data/
 models/*.h5
+models/*.keras
 
 #Jupyter Notebook
 .ipynb_checkpoints

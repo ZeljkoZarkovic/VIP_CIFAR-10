@@ -21,3 +21,7 @@ mlflow>=2.8
 # Utilities
 tqdm>=4.66
 pyyaml>=6.0
+
+#Backend API
+flask>=3.0
+flask-cors>=4.0
