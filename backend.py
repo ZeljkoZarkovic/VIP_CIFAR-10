@@ -16,7 +16,7 @@ CORS(app)
 CLASSES = ['airplane', 'automobile', 'bird', 'cat', 'deer',
            'dog', 'frog', 'horse', 'ship', 'truck']
 
-MODELS_DIR = Path('models')
+MODELS_DIR = Path(__file__).parent / 'models'
 
 #Cache za ucitane modele
 _model_cache = {}
