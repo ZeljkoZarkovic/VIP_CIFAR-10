@@ -5,7 +5,7 @@ import io
 import json
 import numpy as np
 from pathlib import Path
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from PIL import Image
 import tensorflow as tf
@@ -84,6 +84,14 @@ def list_models():
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({'status': 'ok'})
+
+@app.route('/')
+def index():
+    return send_from_directory('frontend', 'index.html')
+
+@app.route('/<path:filename>')
+def frontend_files(filename):
+    return send_from_directory('frontend', filename)
 
 if __name__ == '__main__':
     print("=" * 50)
