@@ -152,7 +152,7 @@ classifyBtn.addEventListener('click', () => {
   formData.append('image', currentFile);
   formData.append('model', document.getElementById('modelSelect').value);
 
-  fetch('http://localhost:5000/predict', {
+  fetch('/predict', {
     method: 'POST',
     body: formData
   })

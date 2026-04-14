@@ -84,19 +84,10 @@ Vreme izvrsavanja: ~30-60 minuta (za 10,000 uzoraka) koriscenjem GPU-a, u mom sl
 
 ## <b>Aplikacija - Pokretanje</b>
 
-### <b>Pokretanje aplikacije</b>
-Za pokretanje aplikacije potrebno je pokrenuti backend i frontend deo.
-
-### <b>Pokretanje backend-a</b>
-U terminalu je potrebno pozicionirati se u root direktorijum projekta i pokrenuti: <b>python backend.py</b>
-Ovim se pokreće Flask API za CIFAR-10 klasifikaciju. Nakon pokretanja, server će biti dostupan na: http://localhost:5000
-
-### <b>Pokretanje frontend-a</b>
-Nakon što je backend pokrenut, potrebno je otvoriti frontend:
-- potrebno je pronaći <b>index.html</b> u <b>frontend</b> folderu
-- pokrenuti ga dvoklikom ili otvoriti u browseru.
-
-Backend mora biti pokrenut pre otvaranja frontend-a, jer aplikacija šalje zahteve ka serveru za klasifikaciju slika.
+### <b>Pokretanje aplikacije - Docker images</b>
+Nakon što se kreira Dockerfile, Docker image se pravi pokretanjem komande: <b>docker build -t cifar10-app .</b>
+Kontejner se pokreće komandom: <b>docker run -p 5000:5000 cifar10-app</b>
+Aplikacija je dostupna i radi na: <b>http://localhost:5000</b>
 
 ## <b>Aplikacija - Uputstvo za korišćenje</b>
 Ova aplikacija služi za klasifikaciju slika pomoću CIFAR-10 modela.
